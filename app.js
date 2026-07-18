@@ -7,7 +7,9 @@ var result = document.getElementById("result");
 
 function dise() {
     var number = Math.ceil(Math.random() * 3);
-    if (card1.src === "http://127.0.0.1:5500/images/back.png" && card2.src === "http://127.0.0.1:5500/images/back.png" && card3.src === "http://127.0.0.1:5500/images/back.png") {
+    if (card1.src === "http://127.0.0.1:5500/images/back.png"
+        && card2.src === "http://127.0.0.1:5500/images/back.png"
+        && card3.src === "http://127.0.0.1:5500/images/back.png") {
         if (number === 1) {
             card1.src = "images/king.png";
             card2.src = "images/king.png";
@@ -17,7 +19,7 @@ function dise() {
             card1.classList.add("animate__flip");
             card2.classList.add("animate__flip");
             card3.classList.add("animate__flip");
-            
+
         } else if (number === 2) {
             card1.src = "images/jocker.png";
             card2.src = "images/jocker.png";
@@ -35,9 +37,9 @@ function dise() {
             card2.classList.add("animate__flip");
             card3.classList.add("animate__flip");
         }
-        
+
     }
-    else{
+    else {
         card1.src = "images/back.png";
         card2.src = "images/back.png";
         card3.src = "images/back.png";
@@ -45,6 +47,6 @@ function dise() {
         card1.classList.remove("animate__flip");
         card2.classList.remove("animate__flip");
         card3.classList.remove("animate__flip");
-        
+
     }
 }
