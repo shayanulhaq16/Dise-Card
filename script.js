@@ -5,8 +5,6 @@ var card3 = document.getElementById("card3");
 var result = document.getElementById("result");
 
 
-console.log(card1.src, card2.src, card3.src);
-
 function dise() {
     var number = Math.ceil(Math.random() * 3);
     if (card1.src === "http://127.0.0.1:5500/images/back.png" && card2.src === "http://127.0.0.1:5500/images/back.png" && card3.src === "http://127.0.0.1:5500/images/back.png") {
