@@ -7,9 +7,13 @@ var result = document.getElementById("result");
 
 function dise() {
     var number = Math.ceil(Math.random() * 3);
-    if (card1.src === "http://127.0.0.1:5500/images/back.png"
-        && card2.src === "http://127.0.0.1:5500/images/back.png"
-        && card3.src === "http://127.0.0.1:5500/images/back.png") {
+    if (
+        card1.src.includes("back.png") &&
+        card2.src.includes("back.png") &&
+        card3.src.includes("back.png")
+    ) {
+        // cards back side par hain
+
         if (number === 1) {
             card1.src = "images/king.png";
             card2.src = "images/king.png";
