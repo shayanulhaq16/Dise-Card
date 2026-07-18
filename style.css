@@ -1,10 +1,12 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* 1. Isse padding/border width se bahar nahi jati */
 }
 
 body{
     background-color: rgb(41, 0, 0);
+    overflow-x: hidden;  /* 2. Kisi bhi haal me horizontal scroll nahi aane dega*/
 }
 
 h1{
@@ -21,7 +23,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    min-height: 60vh; /* 3. 'height' ki jagah 'min-height' taake content ke mutabiq jagah barh sake */
     flex-wrap: wrap;
 }
 
@@ -33,29 +35,34 @@ h1{
 }
 
 #dise{
+    display: block; /* 4. Margins ko sahi se handle karne ke liye block kiya */
     padding: 7px 29px;
     background-color: rgb(39, 25, 25);
     color: seashell;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
-    margin: 0 45%;
+    margin: 15px auto 0 auto; /* 5. button ko hamesha center me rakhega screen choti ho ya bari */
     border: none;
     border-radius: 5px;
-    margin-top: 15px;
 }
 
 /* Tablet */
 @media (max-width: 786px) {
-    .container{
-        height: 800px;
-        
+    .container {
+        /* Fix: Kisi fixed height ki zaroorat nahi, flex-wrap khud manage kar lega */
+        min-height: auto; 
     }    
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-    .container{
-        height: 1200px;
+    .container {
+        min-height: auto;
         width: 100%;
+    }
+
+    /* screen se bahar na nikle */
+    body {
+        width: 100%; 
     }
 }
